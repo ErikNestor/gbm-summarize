@@ -1,0 +1,15 @@
+BASE_URI: 'https://www.cbioportal.org/api/molecular-profiles/'
+GENE_SYMBOL_TO_ID_MAPPING_FILE: 'lib/gene_results.csv'
+CACHE_FILE: '/tmp/.gs-cache.txt'
+STUDY_RESOURCE:
+  MUTATIONS: 'gbm_tcga_mutations/mutations/fetch'
+  ALTERATIONS: 'gbm_tcga_gistic/discrete-copy-number/fetch'
+REQUEST_PARAMS:
+  MUTATIONS:
+    projection: 'SUMMARY'
+    pageSize: '10000000'
+    pageNumber: '0'
+    direction: 'ASC'
+  ALTERATIONS:
+    discreteCopyNumberEventType: 'ALL'
+    projection: 'SUMMARY'
